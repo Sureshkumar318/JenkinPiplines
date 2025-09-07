@@ -1,0 +1,29 @@
+pipeline {
+    agent {
+        docker{ image 'node:16-alpine' }
+    }
+
+    stages {
+        stage('CheckVersion') {
+            steps {
+                sh 'node --version'
+            }
+        }
+        stage('Check Pwd') {
+            steps {
+                sh 'pwd'
+            }
+        }
+        stage('Check list') {
+            steps {
+                sh 'ls -ltr'
+            }
+        }
+        stage('Install Deps') {
+    steps {
+        sh 'npm install || echo "No dependencies to install"'
+    }
+}
+    }
+}
+
