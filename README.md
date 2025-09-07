@@ -57,10 +57,3 @@ Jenkins with Docker support enabled
 
 Node.js project with a package.json file (optional, for npm install step)
 
-▶️ Running the Pipeline
-
-Copy this Jenkinsfile into your repository root.
-
-In Jenkins, create a Pipeline job pointing to this repo.
-
-Run the job — Jenkins will automatically spin up the container and execute the stages.
